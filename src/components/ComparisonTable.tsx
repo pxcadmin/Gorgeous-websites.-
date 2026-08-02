@@ -54,9 +54,22 @@ export function ComparisonTable() {
           {rows.map((row) => (
             <tr key={row[0]}>
               {row.map((cell, index) => (
-                <td className={index === 4 ? "table-aqua" : ""} key={cell}>
-                  {cell}
-                </td>
+<td
+  key={cell}
+  className={`${index === 4 ? "table-aqua" : ""} ${
+    cell === "Yes"
+      ? "status-yes"
+      : cell === "Sometimes"
+      ? "status-sometimes"
+      : cell === "Rarely"
+      ? "status-rarely"
+      : cell === "No"
+      ? "status-no"
+      : ""
+  }`}
+>
+  {cell}
+</td>
               ))}
             </tr>
           ))}
