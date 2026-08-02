@@ -19,7 +19,9 @@ import { OfferCard } from "../components/OfferCard";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { CTASection } from "../components/CTASection";
 import { frameworks, offers, faqs, siteUrl } from "../data/site";
-import type { ComponentType } from "react";
+import type { ComponentType, CSSProperties } from "react";
+import { CountUpStat } from "../components/CountUpStat";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const schema = {
@@ -107,14 +109,31 @@ export function Home() {
                     {index === 0
                       ? "Staff turnover costs practices $82,000–$140,000 per physician annually."
                       : index === 1
-                        ? "The right AI plan starts with governance, not another subscription."
+                        ? "AI automation can reclaim 4.2 hours/day per provider when it is implemented around the work."
                         : index === 2
-                          ? "A patient feels every internal handoff your team has to recover."
+                          ? "Representative PXC improvements have produced a 23% revenue increase within 6 months."
                           : "Operational drag compounds long before it shows up in a financial report."}
                   </p>
                 </article>
               </Reveal>
             ))}
+          </div>
+          <div className="stats-row">
+            <CountUpStat
+              value={140}
+              format={(current) => `$82K–$${Math.round(current)}K`}
+              label="Annual turnover cost per physician"
+            />
+            <CountUpStat
+              value={4.2}
+              suffix=" hrs/day"
+              label="Administrative burden available to reclaim"
+            />
+            <CountUpStat
+              value={23}
+              suffix="%"
+              label="Representative revenue increase within six months"
+            />
           </div>
         </div>
       </section>
@@ -147,7 +166,12 @@ export function Home() {
             }>;
             return (
               <Reveal key={framework.name} delay={index * 0.08}>
-                <article className="content-card framework-card">
+                <article
+                  className="content-card framework-card"
+                  style={
+                    { "--framework-accent": framework.accent } as CSSProperties
+                  }
+                >
                   <SectionEyebrow>{framework.stage}</SectionEyebrow>
                   <Icon className="framework-icon" size={25} />
                   <h3>{framework.name}</h3>
@@ -157,6 +181,36 @@ export function Home() {
               </Reveal>
             );
           })}
+        </div>
+      </section>
+      <section className="section surface mission-section">
+        <SectionEyebrow>THE PXC MISSION</SectionEyebrow>
+        <h2 className="section-heading">
+          “We improve the inside of medical practices so the experience on the
+          outside becomes unforgettable.”
+        </h2>
+        <div className="detail-grid">
+          <article className="content-card">
+            <h3>21 Years in Healthcare</h3>
+            <p>
+              Front-line operations, culture, and patient experience expertise
+              grounded in the realities of independent practices.
+            </p>
+          </article>
+          <article className="content-card">
+            <h3>The Anti-Private-Equity Stand</h3>
+            <p>
+              We help physician-owners stay independent, competitive, and
+              excellent—instead of selling out to consolidators.
+            </p>
+          </article>
+          <article className="content-card">
+            <h3>Fix the Inside First</h3>
+            <p>
+              Better systems, stronger teams, and responsible AI make the
+              outside experience unforgettable.
+            </p>
+          </article>
         </div>
       </section>
       <section className="section surface">
@@ -202,7 +256,7 @@ export function Home() {
         <div className="founder-grid">
           <div className="founder-portrait">
             <img
-              src="/assets/jennifer-headshot.png"
+              src="/assets/jennifer-headshot.webp"
               alt="Jennifer Radu, founder of Patient eXperience Consulting, wearing a blue blouse"
             />
           </div>
@@ -277,7 +331,7 @@ export function Home() {
                 {title === "Human authority" ? (
                   <img
                     className="authority-photo"
-                    src="/assets/jennifer-ted-talk.png"
+                    src="/assets/jennifer-ted-talk.webp"
                     alt="Jennifer Radu speaking on stage about healthcare AI and patient experience"
                   />
                 ) : (
@@ -288,6 +342,89 @@ export function Home() {
               </article>
             );
           })}
+        </div>
+      </section>
+      <section className="section">
+        <SectionEyebrow>AUTHORITY &amp; VISIBILITY</SectionEyebrow>
+        <h2 className="section-heading">
+          A healthcare operator in the rooms where change happens.
+        </h2>
+        <div className="authority-gallery">
+          {[
+            [
+              "/assets/jennifer-ted-talk.webp",
+              "TED Talk / Jennifer Radu translates AI hype into practice reality.",
+            ],
+            [
+              "/assets/jennifer-live-speech.webp",
+              "Live keynote / Speaking to leaders about the inside of the practice.",
+            ],
+            [
+              "/assets/jennifer-podcast.webp",
+              "Podcast interview / AI in Healthcare conversations without vendor bias.",
+            ],
+            [
+              "/assets/jennifer-training-session.webp",
+              "Training session / Leading staff through practical adoption together.",
+            ],
+          ].map(([src, caption]) => (
+            <figure className="gallery-figure" key={src}>
+              <img src={src} alt={caption} />
+              <figcaption>{caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+      <section className="section surface">
+        <SectionEyebrow>THE PXC PROGRAMS</SectionEyebrow>
+        <h2 className="section-heading">
+          Explore the brands built around the same transformation logic.
+        </h2>
+        <div className="subbrand-grid">
+          {[
+            [
+              "/assets/medai-logo-rect.png",
+              "MED-AI Studio™",
+              "Podcast and practical AI education",
+              "/med-ai-studio",
+              "red",
+            ],
+            [
+              "/assets/ppp-logo.png",
+              "Practice Professionals Playground",
+              "Community for ongoing implementation",
+              "/services/practice-professionals-playground",
+              "green",
+            ],
+            [
+              "/assets/p2p-logo.png",
+              "From Patient$ to Profit$™",
+              "Patient experience that funds growth",
+              "/from-patients-to-profits",
+              "lavender",
+            ],
+            [
+              "/assets/events-logo.jpg",
+              "AI Blueprint Day™",
+              "A focused strategy day for teams",
+              "/ai-blueprint-day",
+              "gold",
+            ],
+            [
+              "/assets/consulting-services-logo.png",
+              "AI Consulting Services",
+              "Practice-specific strategy and execution",
+              "/services",
+              "gold",
+            ],
+          ].map(([logo, name, text, to, accent]) => (
+            <Link className={`subbrand-card ${accent}`} to={to} key={name}>
+              <img src={logo} alt={`${name} logo`} />
+              <h3>{name}</h3>
+              <p>{text}</p>
+              <span>Explore →</span>
+            </Link>
+          ))}
         </div>
       </section>
       <section className="section">

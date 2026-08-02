@@ -4,6 +4,8 @@ export interface Offer {
   price: string;
   includes: string[];
   to: string;
+  accent?: string;
+  summary?: string;
 }
 export interface PageMeta {
   title: string;

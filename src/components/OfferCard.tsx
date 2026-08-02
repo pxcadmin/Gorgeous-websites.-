@@ -1,11 +1,17 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Offer } from "../types";
+import type { CSSProperties } from "react";
 export function OfferCard({ offer }: { offer: Offer; key?: string }) {
   return (
-    <article className="offer-card">
+    <article
+      className="offer-card"
+      style={{ "--offer-accent": offer.accent } as CSSProperties}
+    >
       <div>
+        <span className="offer-accent-bar" />
         <h3>{offer.name}</h3>
+        {offer.summary && <p className="offer-summary">{offer.summary}</p>}
         <p className="offer-best">
           <b>Best for:</b> {offer.best}
         </p>

@@ -11,6 +11,7 @@ export function PageShell({
   eyebrow = "PATIENT EXPERIENCE CONSULTING® / PXC",
   schema,
   opening,
+  accent,
   children,
 }: {
   title: string;
@@ -19,12 +20,13 @@ export function PageShell({
   eyebrow?: string;
   schema?: object;
   opening?: string;
+  accent?: string;
   children: ReactNode;
 }) {
   return (
     <>
       <Seo title={title} description={description} schema={schema} />
-      <section className="page-hero">
+      <section className={`page-hero page-hero-${accent || "aqua"}`}>
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
         <h1>{heading}</h1>
         <p className="hero-lead">{opening || description}</p>

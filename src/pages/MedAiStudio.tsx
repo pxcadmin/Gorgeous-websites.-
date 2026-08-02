@@ -1,39 +1,45 @@
 import { PageShell } from "./ContentPage";
+
 export function MedAiStudio() {
   return (
     <PageShell
       config={{
-        title: "MED-AI Studio™ | PXC",
+        title: "MED-AI Studio™ | The Practical AI in Healthcare Podcast",
         description:
-          "AI tools designed for the real world of medical practice.",
-        heading:
-          "MED-AI Studio™: AI Tools Designed for the Real World of Medical Practice",
-        eyebrow: "MED-AI STUDIO™ / COMMAND RED",
+          "MED-AI Studio™ is Jennifer Radu's twice-weekly podcast about practical AI in healthcare.",
+        heading: "MED-AI Studio™: The Practical AI in Healthcare Podcast",
+        eyebrow: "MED-AI STUDIO™ / TUESDAYS + THURSDAYS",
         image: {
           src: "/assets/medai-banner.png",
-          alt: "MED-AI Studio banner showing practical AI tools for medical practice teams",
+          alt: "MED-AI Studio podcast banner showing practical AI conversations for medical practice teams",
         },
         intro:
-          "MED-AI Studio™ turns repetitive practice work into safe, practical workflows with custom prompts, GPTs, automations, and team training.",
+          "MED-AI Studio™ is a podcast airing Tuesdays and Thursdays for healthcare leaders who want useful AI conversations without technical overwhelm or vendor bias.",
         accent: "red",
         sections: [
           {
-            title: "Custom prompts",
-            text: "Translate your best practice knowledge into repeatable, reviewable prompts for the work your team does every day.",
+            title: "Tuesdays / the conversation",
+            text: "Jennifer tackles the questions practice leaders are actually asking about AI, liability, adoption, and the future of care.",
             items: [
-              "Intake and message drafting",
-              "Handoff and follow-up prompts",
+              "AI in the real world of practice operations",
+              "Leadership, staff, and patient trust",
             ],
           },
           {
-            title: "Practice GPTs",
-            text: "Give staff a reliable starting point for common questions without pretending one generic bot understands your practice.",
-            items: ["Role-based assistants", "Human review checkpoints"],
+            title: "Thursdays / the build",
+            text: "Practical demos, workflows, and tool breakdowns show what implementation can look like inside a functioning practice.",
+            items: [
+              "Practice Operations Engine builds",
+              "Human review checkpoints",
+            ],
           },
           {
-            title: "Workflow automations",
-            text: "Connect the right steps so AI removes administrative drag rather than creating another place to check.",
-            items: ["No-show recovery", "Huddle and reporting rhythms"],
+            title: "Listen, subscribe, share",
+            text: "Use each episode as a starting point for a team conversation—not another tab your practice forgets to open.",
+            items: [
+              "New episodes twice weekly",
+              "Resources linked to every episode",
+            ],
           },
         ],
       }}

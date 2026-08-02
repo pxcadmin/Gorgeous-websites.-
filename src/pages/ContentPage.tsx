@@ -15,7 +15,13 @@ export interface ContentConfig {
   accent?: string;
   image?: { src: string; alt: string };
 }
-export function ContentPage({ config }: { config: ContentConfig }) {
+export function ContentPage({
+  config,
+  children,
+}: {
+  config: ContentConfig;
+  children?: ReactNode;
+}) {
   return (
     <BasePageShell
       title={config.title}
@@ -23,6 +29,7 @@ export function ContentPage({ config }: { config: ContentConfig }) {
       heading={config.heading}
       eyebrow={config.eyebrow}
       opening={config.intro}
+      accent={config.accent}
       schema={{
         "@context": "https://schema.org",
         "@type": "Service",
@@ -60,6 +67,7 @@ export function ContentPage({ config }: { config: ContentConfig }) {
           </Card>
         ))}
       </div>
+      {children}
       <div className="content-card next-step">
         <h2 className="section-heading">
           Ready for a practice-specific next move?
@@ -74,8 +82,14 @@ export function ContentPage({ config }: { config: ContentConfig }) {
     </BasePageShell>
   );
 }
-export function PageShell({ config }: { config: ContentConfig }) {
-  return <ContentPage config={config} />;
+export function PageShell({
+  config,
+  children,
+}: {
+  config: ContentConfig;
+  children?: ReactNode;
+}) {
+  return <ContentPage config={config}>{children}</ContentPage>;
 }
 export function FormPage({
   config,
@@ -94,6 +108,7 @@ export function FormPage({
       heading={config.heading}
       eyebrow={config.eyebrow}
       opening={config.intro}
+      accent={config.accent}
     >
       <p className="section-intro">{config.intro}</p>
       <form

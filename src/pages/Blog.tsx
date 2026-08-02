@@ -21,6 +21,11 @@ export function Blog() {
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>
             <small>{post.date}</small>
+            {post.slug === "experience-instability-trap" && (
+              <p>
+                <Link to={`/blog/${post.slug}`}>Read the full article →</Link>
+              </p>
+            )}
             <p>
               <Link to="/newsletter">
                 Get the next insight in The Practice Pulse™ →

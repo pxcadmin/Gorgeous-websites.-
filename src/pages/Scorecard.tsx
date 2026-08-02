@@ -62,7 +62,7 @@ export function Scorecard() {
             <p>
               {score >= 7
                 ? "The next move is governed implementation and reinforcement."
-                : "Start with a Practice Clarity Assessment™ to identify the friction point deserving attention first."}
+                : "Start with a Practice Clarity & AI Readiness Assessment™ to identify the friction point deserving attention first."}
             </p>
             <Button to="/strategy-session">Book Your Strategy Call</Button>
           </>

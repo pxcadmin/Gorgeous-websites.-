@@ -19,18 +19,20 @@ import { Playground } from "./pages/Playground";
 import { StrategySession } from "./pages/StrategySession";
 import { Newsletter } from "./pages/Newsletter";
 import { NotFound } from "./pages/NotFound";
+import { FromPatientsToProfits } from "./pages/FromPatientsToProfits";
+import { BlogArticle } from "./pages/BlogArticle";
 import "./styles/design-system.css";
 
 const services = {
   clarity: {
-    title: "Practice Clarity Assessment™",
+    title: "Practice Clarity & AI Readiness Assessment™",
     description: "See exactly what is holding your medical practice back.",
     heading:
-      "Practice Clarity Assessment™: See Exactly What's Holding Your Practice Back",
-    price: "from $997",
+      "Practice Clarity & AI Readiness Assessment™: See Exactly What's Holding Your Practice Back",
+    price: "$997 – $5,497",
     stage: "VIBE-CODED PRACTICE BLUEPRINT™ / DIAGNOSE",
     deliverables: [
-      "Practice diagnosis",
+      "Practice diagnosis and AI Readiness Score",
       "AI Readiness Score",
       "Lost Revenue + Wasted Time Report",
       "AI Integration Opportunity Map",
@@ -43,7 +45,7 @@ const services = {
     title: "Impact Blueprint™",
     description: "A customized roadmap to medical practice growth.",
     heading: "Impact Blueprint™: A Customized Roadmap to Practice Growth",
-    price: "$8,500/month for 3–4 months",
+    price: "$8,500 – $12,500 /mo · 3–4 mo",
     stage: "IMPACT SYSTEM™ / STRATEGIZE",
     deliverables: [
       "Strategic transformation roadmap",
@@ -60,7 +62,7 @@ const services = {
     description: "Full-practice AI integration and experience overhaul.",
     heading:
       "Excel Transformation™: Full-Practice AI Integration and Experience Overhaul",
-    price: "$13,500/month for 12 months",
+    price: "$13,500 – $17,500 /mo · 12 mo",
     stage: "EXCEL TRANSFORMATION™ / DEPLOY",
     deliverables: [
       "Custom AI deployment expansion",
@@ -99,6 +101,14 @@ export default function App() {
           />
           <Route path="/results" element={<Results />} />
           <Route path="/blog" element={<Blog />} />
+          <Route
+            path="/blog/experience-instability-trap"
+            element={<BlogArticle />}
+          />
+          <Route
+            path="/from-patients-to-profits"
+            element={<FromPatientsToProfits />}
+          />
           <Route path="/contact" element={<Contact />} />
           <Route
             path="/discovery-questionnaire"

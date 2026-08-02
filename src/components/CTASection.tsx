@@ -14,7 +14,7 @@ export function CTASection() {
       <div className="button-row">
         <Button>Book Your Strategy Call</Button>
         <Button to="/services/practice-clarity-assessment" variant="ghost">
-          Start with the Practice Clarity Assessment™
+          Start with the Practice Clarity &amp; AI Readiness Assessment™
         </Button>
       </div>
     </section>

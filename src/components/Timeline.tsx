@@ -3,7 +3,7 @@ export function Timeline() {
     [
       "01",
       "Diagnose",
-      "Start with the Practice Clarity Assessment™",
+      "Start with the Practice Clarity & AI Readiness Assessment™",
       "Visibility into leaks, friction, and readiness",
       "Clear priorities",
     ],
@@ -24,39 +24,23 @@ export function Timeline() {
     [
       "04",
       "Sustain",
-      "Reinforce through the PX Cycle™",
+      "Reinforce through the AI-Fueled People-Powered PX Cycle™",
       "Feedback loops, training, and compounding gains",
       "Long-term results",
     ],
   ];
   return (
-    <>
-      <div className="timeline">
-        {steps.map(([number, stage, title, focus, result]) => (
-          <div className="timeline-step" key={number}>
-            <span>
-              {number} / {stage}
-            </span>
-            <h3>{title}</h3>
-            <p>{focus}</p>
-            <strong>{result}</strong>
-          </div>
-        ))}
-      </div>
-      <div className="mini-table">
-        <div>
-          <b>Stage</b>
-          <b>Primary focus</b>
-          <b>Typical result</b>
+    <div className="timeline">
+      {steps.map(([number, stage, title, focus, result]) => (
+        <div className="timeline-step" key={number}>
+          <span>
+            {number} / {stage}
+          </span>
+          <h3>{title}</h3>
+          <p>{focus}</p>
+          <strong>{result}</strong>
         </div>
-        {steps.map(([, stage, , focus, result]) => (
-          <div key={stage}>
-            <span>{stage}</span>
-            <span>{focus}</span>
-            <strong>{result}</strong>
-          </div>
-        ))}
-      </div>
-    </>
+      ))}
+    </div>
   );
 }

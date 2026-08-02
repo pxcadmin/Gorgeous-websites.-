@@ -46,7 +46,7 @@ export function ServicesHub() {
           className="button button-ghost"
           to="/services/practice-clarity-assessment"
         >
-          Start with the Practice Clarity Assessment™
+          Start with the Practice Clarity &amp; AI Readiness Assessment™
         </Link>
       </section>
       <section className="section">

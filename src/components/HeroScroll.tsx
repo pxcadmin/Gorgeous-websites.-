@@ -50,7 +50,7 @@ export function HeroScroll() {
               Book Your Strategy Call <ArrowDown size={16} />
             </a>
             <a className="button button-ghost" href="/services">
-              Explore the Offer Stack
+              Practice Clarity &amp; AI Readiness Assessment™
             </a>
           </div>
           <div className="hero-scroll-insight">

@@ -28,7 +28,7 @@ export function About() {
       <div className="founder-grid">
         <div className="founder-portrait">
           <img
-            src="/assets/jennifer-headshot.png"
+            src="/assets/jennifer-headshot.webp"
             alt="Forward-facing headshot of Jennifer Radu in a blue blouse"
           />
         </div>
@@ -75,12 +75,51 @@ export function About() {
             outcome.
           </p>
         </Card>
+        <Card>
+          <img
+            className="wide-photo"
+            src="/assets/jennifer-live-speech.webp"
+            alt="Jennifer Radu delivering a live keynote with the PXC logo backdrop"
+          />
+          <SectionEyebrow>THE KEYNOTE</SectionEyebrow>
+          <h3>Make the invisible visible</h3>
+          <p>
+            Jennifer helps leaders name the operational patterns that keep
+            excellent practices stuck.
+          </p>
+        </Card>
+        <Card>
+          <img
+            className="wide-photo"
+            src="/assets/jennifer-podcast.webp"
+            alt="Jennifer Radu in a podcast interview about AI in healthcare"
+          />
+          <SectionEyebrow>THE PODCASTER</SectionEyebrow>
+          <h3>AI without the theater</h3>
+          <p>
+            On MED-AI Studio™, Jennifer turns vendor noise into practical
+            conversations for practice leaders.
+          </p>
+        </Card>
+        <Card>
+          <img
+            className="wide-photo"
+            src="/assets/jennifer-training-session.webp"
+            alt="Jennifer Radu leading staff training in a medical practice cafeteria"
+          />
+          <SectionEyebrow>THE TRAINER</SectionEyebrow>
+          <h3>Adoption happens with people</h3>
+          <p>
+            The tools only matter when teams understand the why, the how, and
+            the guardrails.
+          </p>
+        </Card>
       </div>
       <div className="detail-grid speaking-grid">
         <Card>
           <img
             className="wide-photo"
-            src="/assets/jennifer-on-stage.png"
+            src="/assets/jennifer-on-stage.webp"
             alt="Jennifer Radu speaking to an audience about practice transformation"
           />
           <SectionEyebrow>THE SPEAKER</SectionEyebrow>
@@ -93,7 +132,7 @@ export function About() {
         <Card>
           <img
             className="wide-photo"
-            src="/assets/jennifer-name-pole.png"
+            src="/assets/jennifer-name-pole.webp"
             alt="Jennifer Radu beside her Patient eXperience Consulting speaking banner"
           />
           <SectionEyebrow>THE AUTHORITY</SectionEyebrow>
