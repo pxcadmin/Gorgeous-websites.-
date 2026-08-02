@@ -10,6 +10,7 @@ export function PageShell({
   heading,
   eyebrow = "PATIENT EXPERIENCE CONSULTING® / PXC",
   schema,
+  opening,
   children,
 }: {
   title: string;
@@ -17,6 +18,7 @@ export function PageShell({
   heading: string;
   eyebrow?: string;
   schema?: object;
+  opening?: string;
   children: ReactNode;
 }) {
   return (
@@ -25,11 +27,7 @@ export function PageShell({
       <section className="page-hero">
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
         <h1>{heading}</h1>
-        <p className="hero-lead">
-          Patient eXperience Consulting® helps medical practices reduce
-          operational drag, strengthen culture, improve patient experience, and
-          implement AI safely. Here is the practical path forward.
-        </p>
+        <p className="hero-lead">{opening || description}</p>
         <div className="button-row">
           <Button>Book Your Strategy Call</Button>
           <Button to="/contact" variant="ghost">

@@ -1,4 +1,6 @@
 export const siteUrl = "https://patientexperienceconsulting.com";
+export const contactEmail = "impact@patientexpepatientexperienceconsulting.com";
+export const contactPhone = "(941) 239-2309";
 export const navigation = [
   { label: "About Jennifer", to: "/about-jennifer-radu" },
   { label: "Services", to: "/services" },

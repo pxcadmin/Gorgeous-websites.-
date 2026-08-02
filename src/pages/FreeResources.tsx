@@ -42,6 +42,22 @@ export function FreeResources() {
           </Card>
         ))}
       </div>
+      <div className="content-card course-card">
+        <img
+          className="course-logo"
+          src="/assets/p2p-logo.png"
+          alt="From Patient$ to Profit$ course logo"
+        />
+        <div>
+          <SectionEyebrow>DEEPER LEARNING</SectionEyebrow>
+          <h3>From Patient$ to Profit$™</h3>
+          <p>
+            Explore the bridge between patient loyalty, operational consistency,
+            and sustainable practice growth.
+          </p>
+          <Link to="/shop">Visit The Puzzle Shop →</Link>
+        </div>
+      </div>
     </PageShell>
   );
 }

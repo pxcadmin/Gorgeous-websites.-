@@ -4,6 +4,7 @@ import { PageShell as BasePageShell } from "../components/PageShell";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
+import type { ReactNode } from "react";
 export interface ContentConfig {
   title: string;
   description: string;
@@ -12,6 +13,7 @@ export interface ContentConfig {
   intro: string;
   sections: { title: string; text: string; items?: string[] }[];
   accent?: string;
+  image?: { src: string; alt: string };
 }
 export function ContentPage({ config }: { config: ContentConfig }) {
   return (
@@ -20,6 +22,7 @@ export function ContentPage({ config }: { config: ContentConfig }) {
       description={config.description}
       heading={config.heading}
       eyebrow={config.eyebrow}
+      opening={config.intro}
       schema={{
         "@context": "https://schema.org",
         "@type": "Service",
@@ -31,6 +34,13 @@ export function ContentPage({ config }: { config: ContentConfig }) {
       }}
     >
       <p className="section-intro">{config.intro}</p>
+      {config.image && (
+        <img
+          className="page-feature-image"
+          src={config.image.src}
+          alt={config.image.alt}
+        />
+      )}
       <div className="detail-grid">
         {config.sections.map((section) => (
           <Card key={section.title}>
@@ -70,9 +80,11 @@ export function PageShell({ config }: { config: ContentConfig }) {
 export function FormPage({
   config,
   newsletter = false,
+  children,
 }: {
   config: ContentConfig;
   newsletter?: boolean;
+  children?: ReactNode;
 }) {
   const [sent, setSent] = useState(false);
   return (
@@ -81,6 +93,7 @@ export function FormPage({
       description={config.description}
       heading={config.heading}
       eyebrow={config.eyebrow}
+      opening={config.intro}
     >
       <p className="section-intro">{config.intro}</p>
       <form
@@ -133,6 +146,7 @@ export function FormPage({
           </>
         )}
       </form>
+      {children}
     </BasePageShell>
   );
 }

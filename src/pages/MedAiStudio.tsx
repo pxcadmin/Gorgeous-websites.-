@@ -9,6 +9,10 @@ export function MedAiStudio() {
         heading:
           "MED-AI Studio™: AI Tools Designed for the Real World of Medical Practice",
         eyebrow: "MED-AI STUDIO™ / COMMAND RED",
+        image: {
+          src: "/assets/medai-banner.png",
+          alt: "MED-AI Studio banner showing practical AI tools for medical practice teams",
+        },
         intro:
           "MED-AI Studio™ turns repetitive practice work into safe, practical workflows with custom prompts, GPTs, automations, and team training.",
         accent: "red",

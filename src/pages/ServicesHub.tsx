@@ -19,6 +19,11 @@ export function ServicesHub() {
         },
       }}
     >
+      <img
+        className="service-logo"
+        src="/assets/consulting-services-logo.png"
+        alt="PXC AI Consulting Services logo"
+      />
       <p className="section-intro">
         PXC diagnoses your practice, architects the right roadmap, builds the
         automations, trains your team, and guides execution until the practice
@@ -43,6 +48,40 @@ export function ServicesHub() {
         >
           Start with the Practice Clarity Assessment™
         </Link>
+      </section>
+      <section className="section">
+        <SectionEyebrow>EXPERTISE AREAS</SectionEyebrow>
+        <h2 className="section-heading">
+          The work behind a stable, scalable practice.
+        </h2>
+        <div className="detail-grid">
+          <div className="content-card">
+            <h3>AI Training &amp; Consulting</h3>
+            <p>
+              Move from tech without context to governed use cases, AI
+              champions, and role-by-role integration.
+            </p>
+            <Link to="/ai-blueprint-day">Explore AI training →</Link>
+          </div>
+          <div className="content-card">
+            <h3>Leadership Development</h3>
+            <p>
+              Give leaders shared language, decision-making rhythms, and the
+              confidence to lead through change.
+            </p>
+            <Link to="/strategy-session">Discuss leadership development →</Link>
+          </div>
+          <div className="content-card">
+            <h3>Patient &amp; Staff Experience</h3>
+            <p>
+              Reduce no-shows, burnout, complaints, and handoff friction by
+              redesigning the experience behind the experience.
+            </p>
+            <Link to="/services/excel-transformation">
+              Explore EXCEL Transformation™ →
+            </Link>
+          </div>
+        </div>
       </section>
     </PageShell>
   );

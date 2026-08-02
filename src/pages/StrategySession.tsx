@@ -8,6 +8,10 @@ export function StrategySession() {
           "Book a free 30-minute Practice Clarity Strategy Session with Jennifer Radu.",
         heading: "Book Your Free 30-Minute Practice Clarity Strategy Session",
         eyebrow: "NO-PRESSURE / PRACTICE CLARITY",
+        image: {
+          src: "/assets/strategy-session-badge.png",
+          alt: "Puzzle Pyramid Strategy Session book now badge",
+        },
         intro:
           "Bring the bottleneck, the missed handoffs, or the AI question. In 30 minutes, you will leave with a clearer view of the next move—not a generic pitch.",
         sections: [

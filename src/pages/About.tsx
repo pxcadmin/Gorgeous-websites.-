@@ -26,7 +26,12 @@ export function About() {
         fluency.
       </p>
       <div className="founder-grid">
-        <div className="founder-portrait">JR</div>
+        <div className="founder-portrait">
+          <img
+            src="/assets/jennifer-headshot.png"
+            alt="Forward-facing headshot of Jennifer Radu in a blue blouse"
+          />
+        </div>
         <div>
           <h2 className="section-heading">
             The insider who understands both sides of the exam room.
@@ -68,6 +73,34 @@ export function About() {
           <p>
             Every recommendation connects a number, a pain point, and a human
             outcome.
+          </p>
+        </Card>
+      </div>
+      <div className="detail-grid speaking-grid">
+        <Card>
+          <img
+            className="wide-photo"
+            src="/assets/jennifer-on-stage.png"
+            alt="Jennifer Radu speaking to an audience about practice transformation"
+          />
+          <SectionEyebrow>THE SPEAKER</SectionEyebrow>
+          <h3>Florida&apos;s voice on AI in healthcare</h3>
+          <p>
+            Jennifer brings the operator&apos;s view to rooms where healthcare
+            leaders need a grounded answer—not another trend report.
+          </p>
+        </Card>
+        <Card>
+          <img
+            className="wide-photo"
+            src="/assets/jennifer-name-pole.png"
+            alt="Jennifer Radu beside her Patient eXperience Consulting speaking banner"
+          />
+          <SectionEyebrow>THE AUTHORITY</SectionEyebrow>
+          <h3>Teach it. Build it. Sustain it.</h3>
+          <p>
+            Her educator, operator, and patient lenses create a perspective few
+            healthcare consultants can replicate.
           </p>
         </Card>
       </div>

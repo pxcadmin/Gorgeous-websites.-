@@ -8,6 +8,10 @@ export function AiBlueprintDay() {
         heading:
           "AI Blueprint Day™: Your Team Leaves Ready to Use AI — Not Just Talk About It",
         eyebrow: "AI BLUEPRINT DAY™ / FIVE STAR GOLD",
+        image: {
+          src: "/assets/events-logo.jpg",
+          alt: "AI Blueprint Day puzzle event logo",
+        },
         intro:
           "A concentrated workshop for leaders and teams who need a practical AI and operations roadmap they can use immediately.",
         accent: "gold",

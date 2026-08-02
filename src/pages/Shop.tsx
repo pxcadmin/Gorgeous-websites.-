@@ -42,6 +42,26 @@ export function Shop() {
           </Card>
         ))}
       </div>
+      <div className="content-card course-card">
+        <img
+          className="course-logo"
+          src="/assets/p2p-logo.png"
+          alt="From Patient$ to Profit$ course logo in Digital Lavender"
+        />
+        <div>
+          <SectionEyebrow>FROM PATIENT$ TO PROFIT$™</SectionEyebrow>
+          <h2 className="section-heading">
+            Build the patient experience that funds the practice.
+          </h2>
+          <p>
+            Pair operational clarity with the revenue conversation: retention,
+            referrals, reputation, and the moments patients remember.
+          </p>
+          <Link className="button button-ghost" to="/contact">
+            Ask about the course →
+          </Link>
+        </div>
+      </div>
     </PageShell>
   );
 }

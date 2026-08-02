@@ -11,7 +11,7 @@ import { Seo } from "../components/Seo";
 import { SectionEyebrow } from "../components/SectionEyebrow";
 import { Button } from "../components/Button";
 import { Reveal } from "../components/Reveal";
-import { HeroVisual } from "../components/HeroVisual";
+import { HeroScroll } from "../components/HeroScroll";
 import { ComparisonTable } from "../components/ComparisonTable";
 import { Timeline } from "../components/Timeline";
 import { BeforeAfter } from "../components/BeforeAfter";
@@ -65,34 +65,7 @@ export function Home() {
         description="Jennifer Radu helps Florida medical practices boost patient satisfaction, reduce no-shows, and implement AI tools that actually work. Book a clarity call today."
         schema={schema}
       />
-      <section className="hero">
-        <div className="hero-copy">
-          <SectionEyebrow>
-            FLORIDA'S AI AUTHORITY FOR MEDICAL PRACTICES
-          </SectionEyebrow>
-          <h1>
-            Fix the Inside of Your Practice <em>First.</em>
-          </h1>
-          <p className="hero-lead">
-            Patient eXperience Consulting® helps independent and group medical
-            practices reduce operational drag, strengthen culture, improve
-            patient experience, and implement AI safely with custom systems,
-            governance, and founder-led accountability.
-          </p>
-          <p className="muted">
-            Traditional consulting is not enough anymore. Generic AI tools are
-            not enough either. PXC transforms practices from the inside out so
-            the experience outside becomes unforgettable.
-          </p>
-          <div className="button-row">
-            <Button>Book Your Strategy Call</Button>
-            <Button to="/services" variant="ghost">
-              Explore the Offer Stack
-            </Button>
-          </div>
-        </div>
-        <HeroVisual />
-      </section>
+      <HeroScroll />
       <div className="trust-ribbon">
         {[
           "21 Years of Healthcare Expertise",
@@ -227,7 +200,12 @@ export function Home() {
       </section>
       <section className="section">
         <div className="founder-grid">
-          <div className="founder-portrait">JR</div>
+          <div className="founder-portrait">
+            <img
+              src="/assets/jennifer-headshot.png"
+              alt="Jennifer Radu, founder of Patient eXperience Consulting, wearing a blue blouse"
+            />
+          </div>
           <div>
             <SectionEyebrow>FOUNDER LED</SectionEyebrow>
             <h2 className="section-heading">
@@ -296,7 +274,15 @@ export function Home() {
                 className="content-card authority-card"
                 key={title as string}
               >
-                <I size={24} />
+                {title === "Human authority" ? (
+                  <img
+                    className="authority-photo"
+                    src="/assets/jennifer-ted-talk.png"
+                    alt="Jennifer Radu speaking on stage about healthcare AI and patient experience"
+                  />
+                ) : (
+                  <I size={24} />
+                )}
                 <h3>{title as string}</h3>
                 <p>{text as string}</p>
               </article>

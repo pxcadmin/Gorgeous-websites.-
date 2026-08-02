@@ -18,6 +18,7 @@ export function ServiceDetail({ service }: { service: ServiceProps }) {
       title={`${service.title} | PXC`}
       description={service.description}
       heading={service.heading}
+      opening={service.description}
       schema={{
         "@context": "https://schema.org",
         "@type": "Service",

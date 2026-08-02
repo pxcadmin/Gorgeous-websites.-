@@ -8,6 +8,10 @@ export function Playground() {
         heading:
           "Practice Professionals Playground: Your Community for Healthcare Practice Growth",
         eyebrow: "PRACTICE PROFESSIONALS PLAYGROUND™ / GROWTH GREEN",
+        image: {
+          src: "/assets/ppp-logo.png",
+          alt: "Practice Professionals Playground logo in Growth Green",
+        },
         intro:
           "A practical community for leaders who want ongoing learning, office hours, tools, templates, and peer connection after the first transformation sprint.",
         accent: "green",

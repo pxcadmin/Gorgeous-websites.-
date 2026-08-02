@@ -109,8 +109,10 @@ button {
     box-shadow 0.2s;
 }
 .button-primary {
-  background: var(--pxc-aqua);
-  color: #071014;
+  background: #ff2a2a;
+  border-color: #ff2a2a;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(255, 42, 42, 0.28);
 }
 .button-ghost {
   background: transparent;
@@ -119,6 +121,204 @@ button {
 .button:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 8px 28px var(--pxc-glow);
+}
+.button-primary:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+  box-shadow: 0 0 34px rgba(255, 42, 42, 0.58);
+}
+.hero-scroll {
+  height: 270vh;
+  position: relative;
+}
+.hero-scroll-stage {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+.hero-scroll-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-scroll-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 10, 14, 0.93) 0%,
+      rgba(10, 10, 14, 0.72) 44%,
+      rgba(10, 10, 14, 0.34) 100%
+    ),
+    linear-gradient(0deg, rgba(10, 10, 14, 0.55), transparent 45%);
+}
+.hero-scroll-content {
+  position: relative;
+  z-index: 2;
+  width: min(720px, calc(100% - 56px));
+  padding-top: 17vh;
+  margin-left: max(28px, calc((100% - 1144px) / 2));
+}
+.hero-scroll-content h1 {
+  font: 900 clamp(42px, 6vw, 76px)/1.02 Nunito;
+  letter-spacing: -0.05em;
+  margin: 0 0 24px;
+}
+.hero-scroll-content h1 em {
+  font-style: normal;
+  color: var(--pxc-aqua);
+}
+.hero-scroll-content .hero-lead {
+  font-size: 18px;
+  max-width: 670px;
+}
+.hero-scroll-note {
+  color: #d9eef0;
+  max-width: 500px;
+}
+.hero-scroll-insight {
+  width: 270px;
+  margin-top: 28px;
+  padding: 17px;
+  background: rgba(17, 17, 21, 0.82);
+  border: 1px solid rgba(5, 242, 255, 0.42);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+}
+.hero-scroll-insight > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+}
+.hero-scroll-insight svg {
+  width: 15px;
+  color: var(--pxc-aqua);
+}
+.scroll-hint {
+  position: absolute;
+  z-index: 3;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #d8f8fa;
+  font: 600 9px JetBrains Mono;
+  letter-spacing: 0.1em;
+  animation: hint-pulse 2.2s ease-in-out infinite;
+}
+.scroll-hint svg {
+  color: var(--pxc-aqua);
+}
+.founder-portrait {
+  overflow: hidden;
+}
+.founder-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.authority-photo {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 20px;
+  font-size: 11px;
+}
+.footer-contact a,
+.contact-direct a {
+  color: var(--pxc-tint);
+}
+.contact-direct {
+  margin-top: 35px;
+  max-width: 680px;
+  padding: 28px;
+  border: 1px solid var(--pxc-rule);
+  border-radius: var(--pxc-radius-card);
+  background: var(--pxc-surf-2);
+}
+.contact-direct a {
+  display: block;
+  margin-top: 7px;
+}
+@keyframes hint-pulse {
+  50% {
+    opacity: 0.48;
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll {
+    height: 100vh;
+  }
+  .hero-scroll-image {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-scroll-image:first-child {
+    z-index: 1;
+  }
+  .hero-scroll-content {
+    transform: none !important;
+  }
+  .scroll-hint {
+    animation: none;
+  }
+}
+.page-feature-image {
+  width: 100%;
+  max-height: 330px;
+  object-fit: cover;
+  border-radius: var(--pxc-radius-card);
+  border: 1px solid var(--pxc-rule);
+  margin: 12px 0 32px;
+}
+.wide-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.service-logo {
+  width: min(430px, 100%);
+  max-height: 125px;
+  object-fit: contain;
+  object-position: left;
+  margin-bottom: 24px;
+}
+.course-card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 30px;
+}
+.course-logo {
+  width: 220px;
+  max-height: 150px;
+  object-fit: contain;
+}
+.course-card h2 {
+  margin-bottom: 15px;
 }
 main {
   overflow: hidden;
@@ -798,6 +998,18 @@ blockquote {
   }
   .page-hero {
     padding-top: 90px;
+  }
+  .hero-scroll {
+    height: 220vh;
+  }
+  .hero-scroll-content {
+    padding-top: 12vh;
+  }
+  .hero-scroll-content h1 {
+    font-size: clamp(38px, 12vw, 58px);
+  }
+  .hero-scroll-insight {
+    width: min(270px, 100%);
   }
   .before-after > div {
     grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import { contactEmail, contactPhone } from "../data/site";
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -18,6 +19,12 @@ export function Footer() {
             becomes unforgettable.
           </p>
           <Button>Book Your Strategy Call</Button>
+          <div className="footer-contact">
+            <a href={`tel:${contactPhone.replace(/\D/g, "")}`}>
+              {contactPhone}
+            </a>
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+          </div>
         </div>
         <div className="footer-links">
           {[
