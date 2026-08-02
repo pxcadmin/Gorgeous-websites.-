@@ -129,7 +129,8 @@ button {
   box-shadow: 0 0 34px rgba(255, 42, 42, 0.58);
 }
 .hero-scroll {
-  height: 270vh;
+  /* 270vh of sticky scroll distance + one viewport for the pinned stage itself. */
+  height: calc(270vh + 100vh);
   position: relative;
 }
 .hero-scroll-stage {
@@ -321,7 +322,7 @@ button {
   margin-bottom: 15px;
 }
 main {
-  overflow: hidden;
+  overflow: visible;
 }
 .section {
   max-width: 1200px;
@@ -1000,7 +1001,7 @@ blockquote {
     padding-top: 90px;
   }
   .hero-scroll {
-    height: 220vh;
+    height: calc(220vh + 100vh);
   }
   .hero-scroll-content {
     padding-top: 12vh;
