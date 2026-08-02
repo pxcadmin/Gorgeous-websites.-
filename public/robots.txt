@@ -1,0 +1,15 @@
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: *
+Allow: /
+Sitemap: https://patientexperienceconsulting.com/sitemap.xml
